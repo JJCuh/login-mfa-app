@@ -34,49 +34,31 @@ To open Cypress and run the end-to-end tests:
 [ Sign Up ] → [ Login Page ] → [ MFA Verification ] → [ Protected Dashboard ]
 
 Sign Up:
-
-  Creates a mock user (stored in memory)
-
-  Choose role: read-only or read-write
+  - Creates a mock user (stored in memory)
+  - Choose role: read-only or read-write
 
 Login:
-
-  Validates email and password
-
-  On success, redirects to MFA screen
+  - Validates email and password
+  - On success, redirects to MFA screen
 
 MFA:
-
-  Enter static OTP (123456)
-
-  On success, grants access to dashboard
+  - Enter static OTP (123456)
+  - On success, grants access to dashboard
 
 Dashboard:
-  
-  Shows user info and role
-  
-  Read-only users can view content
-
-  Read-write users can edit content
+  - Shows user info and role
+  - Read-only users can view content
+  - Read-write users can edit content
 
 ## Notes
-
-  No database used — mock data stored in src/services/authService.js
-
-  Role-based access handled in src/components/RoleBasedActions.jsx
-
-  MFA is simulated with a static OTP (123456)
-
-  Uses React Context for auth state and React Router for navigation
+  - No database used — mock data stored in src/services/authService.js
+  - Role-based access handled in src/components/RoleBasedActions.jsx
+  - MFA is simulated with a static OTP (123456)
+  - Uses React Context for auth state and React Router for navigation
 
 ## Features
-
-  Login with validation
-
-  Mock MFA verification step
-
-  Role-based UI control (read-only / read-write)
-
-  Protected routes
-
-  Cypress E2E test coverage
+  - Login with validation
+  - Mock MFA verification step
+  - Role-based UI control (read-only / read-write)
+  - Protected routes
+  - Cypress E2E test coverage
